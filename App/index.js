@@ -84,14 +84,14 @@ export default class App extends React.Component {
 
     state = {
         remainingSeconds: 5,
-        isrunnung: false,
+        isrunning: false,
         selectedMinutes: "0",
         selectedSeconds: "5",
 
     }
     interval = null;
 
-    componentWillUpdate(prevProp, prevState) {
+    componentDidUpdate(prevProp, prevState) {
         if (this.state.remainingSeconds === 0 && prevState.remainingSeconds !== 0) {
             this.stop();
         }
@@ -108,7 +108,7 @@ export default class App extends React.Component {
             remainingSeconds:
                 parseInt(state.selectedMinutes, 10) * 60 +
                 parseInt(state.selectedSeconds, 10),
-            isrunnung: true
+            isrunning: true
         }));
 
 
@@ -121,7 +121,7 @@ export default class App extends React.Component {
     stop = () => {
         clearInterval(this.interval);
         this.interval = null;
-        this.setState({ remainingSeconds: 5, isRunning: false })
+        this.setState({ remainingSeconds: 5, isrunning: false })
 
     }
     renderPickers = () => (
@@ -169,14 +169,14 @@ export default class App extends React.Component {
         return (
             <View style={styles.container}>
                 <StatusBar barStyle="light-content" />
-                {this.state.isrunnung ? (
+                {this.state.isrunning ? (
 
                     <Text style={styles.timer}>{`${minutes}:${seconds}`}</Text>
-                ) :(
-                     this.renderPickers()
-                )}
-                    
-                {this.state.isrunnung ? (
+                ) : (
+                        this.renderPickers()
+                    )}
+
+                {this.state.isrunning ? (
 
                     <TouchableOpacity style={[styles.button, styles.buttonStop]} onPress={this.stop}>
                         <Text style={[styles.buttonText, styles.buttonTextStop]}>STOP</Text>
