@@ -11,18 +11,14 @@ A simple cross platform (iOS and Android) React Native timer app.
 
 ### Running
 
-- For Emulator:
 ---
+
+## Emulator:
+
 - `yarn run ios`/`npm run ios` or `yarn run android`/`npm run android`
 
+## Actual Device
 
--For Actual Device
----
 - Install Expo Client on Android Or Ios then
 - `yarn start`/`npm start`
 - Scan Qr code
-
-
-
-
-
