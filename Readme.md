@@ -4,9 +4,9 @@ A simple cross platform (iOS and Android) React Native timer app.
 
 <!-- ![Image](./assets/Timer1.png) ![Image](./assets/Timer2.png) -->
 
-Image-1            |  Image-2
-:-------------------------:|:-------------------------:
-![](./assets/Timer1.png)  |  ![](./assets/Timer2.png)
+|          Start           |           Stop           |
+| :----------------------: | :----------------------: |
+| ![](./assets/Timer2.png) | ![](./assets/Timer2.png) |
 
 ### Installation
 
