@@ -21,6 +21,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Simple Timer App",
+    "githubUrl": "https://github.com/Manojj999/RN-Timer"
   }
 }
